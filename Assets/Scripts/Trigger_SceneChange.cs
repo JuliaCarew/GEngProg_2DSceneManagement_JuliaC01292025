@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Gizmo_TriggerSceneChange : MonoBehaviour
@@ -21,10 +19,5 @@ public class Gizmo_TriggerSceneChange : MonoBehaviour
             // Draw the WireCube
             Gizmos.DrawCube(center, size);
         }
-        else
-        {
-            Debug.LogWarning("BoxCollider2D component not found on the GameObject.");
-        }
     }
-
 }

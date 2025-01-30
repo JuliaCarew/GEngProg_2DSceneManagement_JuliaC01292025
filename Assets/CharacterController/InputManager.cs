@@ -18,7 +18,7 @@ public class InputManager : MonoBehaviour, GameInput.IPlayerActions
     {
         if (context.performed || context.canceled) // prevent sliding, char stops moving when button released
         {
-            Debug.Log("Move input recieving: " + context.ReadValue<Vector2>());
+            //Debug.Log("Move input recieving: " + context.ReadValue<Vector2>());
             InputActions.MoveEvent?.Invoke(context.ReadValue<Vector2>());
         }
     }
@@ -27,12 +27,12 @@ public class InputManager : MonoBehaviour, GameInput.IPlayerActions
     {
         if (context.performed)
         {
-            Debug.Log("Interaction input recieving: " + context.ReadValue<float>());
+            //Debug.Log("Interaction input recieving: " + context.ReadValue<float>());
             InputActions.InteractEvent?.Invoke();
         }
         if (context.canceled)
         {
-            Debug.Log("Interaction input cancelled: " + context.ReadValue<float>());
+            //Debug.Log("Interaction input cancelled: " + context.ReadValue<float>());
             InputActions.InteractEventCancelled?.Invoke();
         }
     }

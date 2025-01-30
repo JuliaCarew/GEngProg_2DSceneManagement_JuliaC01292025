@@ -12,3 +12,12 @@ public class Gizmo_SpawnPoint : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, 0.25f); // Draw a sphere at the spawn point location with radius 0.5
     }
 }
+public class SpawnPoint : MonoBehaviour
+{
+    [SerializeField] private string spawnPointName; 
+
+    private void Awake()
+    {
+        gameObject.name = spawnPointName; 
+    }
+}
