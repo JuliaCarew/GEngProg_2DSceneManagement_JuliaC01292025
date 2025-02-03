@@ -21,12 +21,12 @@ public class LevelManager : MonoBehaviour
     private void SetPlayerToSpawn()
     {
         GameObject spawnPoint = GameObject.Find(spawnPointName);
-        if (spawnPoint != null)
-        {
+        if (spawnPoint != null) {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (player != null)
             {
                 player.transform.position = spawnPoint.transform.position;
+                //Debug.Log($"Player spawned at {spawnPointName}");
             }
         }
         else
